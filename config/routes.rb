@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'doodles/index'
+
+  get 'products/index'
+
+  resources :doodles do
+    resources :app_users
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
